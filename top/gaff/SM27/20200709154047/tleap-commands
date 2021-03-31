@@ -1,0 +1,8 @@
+source leaprc.gaff
+source leaprc.ff03.r1
+LIG = loadmol2 UNK.mol2
+check LIG
+LoadAmberParams UNK.frcmod
+saveoff LIG UNK.lib 
+saveAmberParm LIG UNK.parm7 UNK.crd
+quit

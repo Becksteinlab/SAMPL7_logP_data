@@ -1,0 +1,31 @@
+remark goes here
+MASS
+
+BOND
+
+ANGLE
+sy-n3-cy   62.430     115.270   same as c3-n3-sy
+cy-s6-cy   62.550      94.570   same as c3-s6-cy
+
+DIHE
+sy-n3-cy-cy   1    0.300         0.000           3.000      same as X -c3-n3-X 
+sy-n3-cy-c3   1    0.300         0.000           3.000      same as X -c3-n3-X 
+n3-cy-c3-c3   1    0.156         0.000           3.000      same as X -c3-c3-X 
+n3-cy-c3-hc   1    0.156         0.000           3.000      same as X -c3-c3-X 
+cy-cy-s6-cy   1    0.144         0.000           3.000      same as X -c3-s6-X 
+cy-cy-s6-o    1    0.144         0.000           3.000      same as X -c3-s6-X 
+cy-cy-n3-hn   1    0.300         0.000           3.000      same as X -c3-n3-X 
+cy-cy-c3-c3   1    0.156         0.000           3.000      same as X -c3-c3-X 
+cy-cy-c3-hc   1    0.156         0.000           3.000      same as X -c3-c3-X 
+cy-s6-cy-h1   1    0.144         0.000           3.000      same as X -c3-s6-X 
+o -s6-cy-h1   1    0.144         0.000           3.000      same as X -c3-s6-X 
+c3-cy-n3-hn   1    0.300         0.000           3.000      same as X -c3-n3-X 
+
+IMPROPER
+ca-ca-ca-ha         1.1          180.0         2.0          General improper torsional angle (2 general atom types)
+ca-ca-ca-sy         1.1          180.0         2.0          Using default value
+
+NONBON
+
+
+

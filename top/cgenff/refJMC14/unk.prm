@@ -1,0 +1,40 @@
+
+[ bondtypes ]
+;      i        j  func           b0           kb
+   NG2S1    SG3O2     1   0.17000000    187443.20
+
+
+[ angletypes ]
+;      i        j        k  func       theta0       ktheta          ub0          kub
+   NG2S1    CG2O6    NG2S1     5   115.000000   585.760000   0.00000000         0.00
+   CG2O6    NG2S1    SG3O2     5   120.000000   502.080000   0.00000000         0.00
+   SG3O2    NG2S1     HGP1     5   113.100000   393.296000   0.00000000         0.00
+   CG331    SG3O2    NG2S1     5   108.500000   661.072000   0.00000000         0.00
+   NG2S1    SG3O2    OG2P1     5    94.200000   277.817600   0.00000000         0.00
+
+
+[ dihedraltypes ]
+;      i        j        k        l  func         phi0         kphi  mult
+   NG2S1    CG2O6    NG2S1    CG321     9     0.000000     6.694400     1
+   NG2S1    CG2O6    NG2S1    CG321     9   180.000000    10.460000     2
+   NG2S1    CG2O6    NG2S1    SG3O2     9     0.000000     6.694400     1
+   NG2S1    CG2O6    NG2S1    SG3O2     9   180.000000    10.460000     2
+   NG2S1    CG2O6    NG2S1     HGP1     9   180.000000    16.736000     2
+   OG2D1    CG2O6    NG2S1    SG3O2     9   180.000000    16.736000     2
+   OG2D1    CG2O6    NG2S1    SG3O2     9     0.000000     3.974800     4
+  CG2R61    CG321    NG2S1    CG2O6     9     0.000000     0.062760     1
+  CG2R61    CG321    NG2S1    CG2O6     9     0.000000     1.246832     2
+  CG2R61    CG321    NG2S1    CG2O6     9   180.000000     0.317984     3
+  CG2R61    CG321    NG2S1    CG2O6     9     0.000000     2.589896     4
+  CG2R61    CG321    NG2S1    CG2O6     9     0.000000     0.619232     6
+    HGA3    CG331    SG3O2    NG2S1     9     0.000000     0.753120     3
+   CG2O6    NG2S1    SG3O2    CG331     9     0.000000     2.309568     3
+   CG2O6    NG2S1    SG3O2    OG2P1     9     0.000000     2.309568     3
+    HGP1    NG2S1    SG3O2    CG331     9     0.000000     0.209200     3
+    HGP1    NG2S1    SG3O2    OG2P1     9     0.000000     0.209200     3
+
+
+[ dihedraltypes ]
+; 'improper' dihedrals 
+;      i        j        k        l  func         phi0         kphi
+   CG2O6    NG2S1    NG2S1    OG2D1     2     0.000000   669.440000
