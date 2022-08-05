@@ -1,0 +1,324 @@
+; input pdb SMILES : CN(C)[S](=O)(=O)NC(=O)CCC1=CC=CC=C1
+; Script arguments : refJMC13.mol2 "7 opls_251 -0.352" "24 opls_254"
+
+[ moleculetype ]
+; Name      nrexcl
+UNK              3
+
+[ atoms ]
+; atomnr  atomtype   resnr  resname  atomname  chargegrp   charge       mass
+       1  opls_474      1      UNK        S4          1     0.852   32.06000 ; SY # S in sulfamide, S(=O)2(NR2)
+       2  opls_475      1      UNK        O5          1    -0.444   15.99940 ; OY # O in sulfamide, S(=O)2(NR2)
+       3  opls_475      1      UNK        O6          1    -0.444   15.99940 ; OY # O in sulfamide, S(=O)2(NR2)
+       4  opls_251      1      UNK        N7          1    -0.352   14.00670 ; N # N   in imide ### user-defined OPLS atom type (opls_251) atom charge (-0.352)
+       5  opls_480      1      UNK        N2          3    -0.464   14.00670 ; N # N tertiary amide of sulfamide
+       6  opls_482      1      UNK        C3          5    -0.155   12.01100 ; CT # alpha CH3-N of sulfamide
+       7  opls_483      1      UNK       H21          5     0.132    1.00800 ; HC # H of alpha CH3-N of sulfamide
+       8  opls_483      1      UNK       H22          5     0.132    1.00800 ; HC # H of alpha CH3-N of sulfamide
+       9  opls_483      1      UNK       H23          5     0.132    1.00800 ; HC # H of alpha CH3-N of sulfamide
+      10  opls_482      1      UNK        C1         11    -0.155   12.01100 ; CT # alpha CH3-N of sulfamide
+      11  opls_483      1      UNK       H18         11     0.132    1.00800 ; HC # H of alpha CH3-N of sulfamide
+      12  opls_483      1      UNK       H19         11     0.132    1.00800 ; HC # H of alpha CH3-N of sulfamide
+      13  opls_483      1      UNK       H20         11     0.132    1.00800 ; HC # H of alpha CH3-N of sulfamide
+      14  opls_235      1      UNK        C8         29     0.500   12.01100 ; C # C=O in amide, dmf, peptide bond
+      15  opls_236      1      UNK        O9         29    -0.500   15.99940 ; O # O: C=O in amide.   Acyl R on C in amide is neutral - 
+      16  opls_149      1      UNK       C11         30    -0.005   12.01100 ; CT # C: CH2, ethyl benzene
+      17  opls_145      1      UNK       C12         30    -0.115   12.01100 ; CA # Benzene C - 12 site JACS,112,4768-90. Use #145B for biphenyl
+      18  opls_140      1      UNK       H27         30     0.060    1.00800 ; HC # alkane H.
+      19  opls_140      1      UNK       H28         30     0.060    1.00800 ; HC # alkane H.
+      20  opls_136      1      UNK       C10         46    -0.120   12.01100 ; CT # alkane CH2 
+      21  opls_140      1      UNK       H25         46     0.060    1.00800 ; HC # alkane H.
+      22  opls_140      1      UNK       H26         46     0.060    1.00800 ; HC # alkane H.
+      23  opls_145      1      UNK       C13         50    -0.115   12.01100 ; CA # Benzene C - 12 site JACS,112,4768-90. Use #145B for biphenyl
+      24  opls_146      1      UNK       H29         50     0.115    1.00800 ; HA # Benzene H - 12 site.
+      25  opls_145      1      UNK       C14         52    -0.115   12.01100 ; CA # Benzene C - 12 site JACS,112,4768-90. Use #145B for biphenyl
+      26  opls_146      1      UNK       H30         52     0.115    1.00800 ; HA # Benzene H - 12 site.
+      27  opls_145      1      UNK       C15         54    -0.115   12.01100 ; CA # Benzene C - 12 site JACS,112,4768-90. Use #145B for biphenyl
+      28  opls_146      1      UNK       H31         54     0.115    1.00800 ; HA # Benzene H - 12 site.
+      29  opls_145      1      UNK       C16         56    -0.115   12.01100 ; CA # Benzene C - 12 site JACS,112,4768-90. Use #145B for biphenyl
+      30  opls_146      1      UNK       H32         56     0.115    1.00800 ; HA # Benzene H - 12 site.
+      31  opls_145      1      UNK       C17         58    -0.115   12.01100 ; CA # Benzene C - 12 site JACS,112,4768-90. Use #145B for biphenyl
+      32  opls_146      1      UNK       H33         58     0.115    1.00800 ; HA # Benzene H - 12 site.
+      33  opls_254      1      UNK       H24         60     0.370    1.00800 ; H # H(N) in imide ### user-defined OPLS atom type (opls_254)
+; Total charge : 0.000 ### Number of unassigned atoms : 0/33
+
+[ bonds ]
+; ai   aj  funct  r  k
+  10    5      1  ; CT-N # 
+  10   11      1  ; CT-HC # CHARMM 22 parameter file
+  10   12      1  ; CT-HC # CHARMM 22 parameter file
+  10   13      1  ; CT-HC # CHARMM 22 parameter file
+   5    6      1  ; N-CT # (CT-N)  
+   5    1      1  ; N-SY # (SY-N)  
+   6    7      1  ; CT-HC # CHARMM 22 parameter file
+   6    8      1  ; CT-HC # CHARMM 22 parameter file
+   6    9      1  ; CT-HC # CHARMM 22 parameter file
+   1    2      1  ; SY-OY # 
+   1    3      1  ; SY-OY # 
+   1    4      1  ; SY-N # 
+   4   14      1  ; N-C # (C-N)  AA
+   4   33      1  ; N-H # (H-N)  
+  14   15      1  ; C-O # URAGUA,CYT,AA
+  14   20      1  ; C-CT # 
+  20   16      1  ; CT-CT # CHARMM 22 parameter file
+  20   21      1  ; CT-HC # CHARMM 22 parameter file
+  20   22      1  ; CT-HC # CHARMM 22 parameter file
+  16   17      1  ; CT-CA # (CA-CT)  PHE,TYR
+  16   18      1  ; CT-HC # CHARMM 22 parameter file
+  16   19      1  ; CT-HC # CHARMM 22 parameter file
+  17   31      1  ; CA-CA # TRP,TYR,PHE
+  17   23      1  ; CA-CA # TRP,TYR,PHE
+  23   25      1  ; CA-CA # TRP,TYR,PHE
+  23   24      1  ; CA-HA # PHE, etc.
+  25   27      1  ; CA-CA # TRP,TYR,PHE
+  25   26      1  ; CA-HA # PHE, etc.
+  27   29      1  ; CA-CA # TRP,TYR,PHE
+  27   28      1  ; CA-HA # PHE, etc.
+  29   31      1  ; CA-CA # TRP,TYR,PHE
+  29   30      1  ; CA-HA # PHE, etc.
+  31   32      1  ; CA-HA # PHE, etc.
+
+[ angles ]
+; ai   aj   ak  funct  theta   cth
+   5   10   11      1  ; N-CT-HC # (HC-CT-N)  
+   5   10   12      1  ; N-CT-HC # (HC-CT-N)  
+   5   10   13      1  ; N-CT-HC # (HC-CT-N)  
+  11   10   12      1  ; HC-CT-HC # CHARMM 22 parameter file
+  11   10   13      1  ; HC-CT-HC # CHARMM 22 parameter file
+  12   10   13      1  ; HC-CT-HC # CHARMM 22 parameter file
+  10    5    6      1  ; CT-N-CT # PRO(OL)         DETAR JACS 99,1232
+  10    5    1      1  ; CT-N-SY # (SY-N-CT)  
+   6    5    1      1  ; CT-N-SY # (SY-N-CT)  
+   5    6    7      1  ; N-CT-HC # (HC-CT-N)  
+   5    6    8      1  ; N-CT-HC # (HC-CT-N)  
+   5    6    9      1  ; N-CT-HC # (HC-CT-N)  
+   7    6    8      1  ; HC-CT-HC # CHARMM 22 parameter file
+   7    6    9      1  ; HC-CT-HC # CHARMM 22 parameter file
+   8    6    9      1  ; HC-CT-HC # CHARMM 22 parameter file
+   5    1    2      1  ; N-SY-OY # (OY-SY-N)  
+   5    1    3      1  ; N-SY-OY # (OY-SY-N)  
+   5    1    4      1  107.000 1004.160 ; N-SY-N #  by analogy from OY-SY-N : 
+   2    1    3      1  ; OY-SY-OY # 
+   2    1    4      1  ; OY-SY-N # 
+   3    1    4      1  ; OY-SY-N # 
+   1    4   14      1  112.000    585.760 ; SY-N-C # LigParGen
+   1    4   33      1  ; SY-N-H # (H-N-SY)  
+  14    4   33      1  ; C-N-H # AA(OL)
+   4   14   15      1  ; N-C-O # AA(OL)
+   4   14   20      1  ; N-C-CT # (CT-C-N)  
+  15   14   20      1  ; O-C-CT # (CT-C-O)  
+  14   20   16      1  ; C-CT-CT # AA
+  14   20   21      1  ; C-CT-HC # 
+  14   20   22      1  ; C-CT-HC # 
+  16   20   21      1  ; CT-CT-HC # CHARMM 22 parameter file
+  16   20   22      1  ; CT-CT-HC # CHARMM 22 parameter file
+  21   20   22      1  ; HC-CT-HC # CHARMM 22 parameter file
+  20   16   17      1  ; CT-CT-CA # (CA-CT-CT)  PHE(OL)         SCH JPC  79,2379
+  20   16   18      1  ; CT-CT-HC # CHARMM 22 parameter file
+  20   16   19      1  ; CT-CT-HC # CHARMM 22 parameter file
+  17   16   18      1  ; CA-CT-HC # 
+  17   16   19      1  ; CA-CT-HC # 
+  18   16   19      1  ; HC-CT-HC # CHARMM 22 parameter file
+  16   17   31      1  ; CT-CA-CA # (CA-CA-CT)  PHE(OL)
+  16   17   23      1  ; CT-CA-CA # (CA-CA-CT)  PHE(OL)
+  23   17   31      1  ; CA-CA-CA # PHE(OL)
+  17   23   25      1  ; CA-CA-CA # PHE(OL)
+  17   23   24      1  ; CA-CA-HA # 
+  25   23   24      1  ; CA-CA-HA # 
+  23   25   27      1  ; CA-CA-CA # PHE(OL)
+  23   25   26      1  ; CA-CA-HA # 
+  27   25   26      1  ; CA-CA-HA # 
+  25   27   29      1  ; CA-CA-CA # PHE(OL)
+  25   27   28      1  ; CA-CA-HA # 
+  29   27   28      1  ; CA-CA-HA # 
+  27   29   31      1  ; CA-CA-CA # PHE(OL)
+  27   29   30      1  ; CA-CA-HA # 
+  31   29   30      1  ; CA-CA-HA # 
+  17   31   29      1  ; CA-CA-CA # PHE(OL)
+  17   31   32      1  ; CA-CA-HA # 
+  29   31   32      1  ; CA-CA-HA # 
+
+[ dihedrals ]
+; ai   aj   ak   al  funct   C0  ...  C5
+  11   10    5    6      3     ; HC-CT-N-CT # (CT-N-CT-HC)  tert. amide
+  11   10    5    1      3     ; HC-CT-N-SY # sulfonamide
+  12   10    5    6      3     ; HC-CT-N-CT # (CT-N-CT-HC)  tert. amide
+  12   10    5    1      3     ; HC-CT-N-SY # sulfonamide
+  13   10    5    6      3     ; HC-CT-N-CT # (CT-N-CT-HC)  tert. amide
+  13   10    5    1      3     ; HC-CT-N-SY # sulfonamide
+  10    5    6    7      3     ; CT-N-CT-HC # tert. amide
+  10    5    6    8      3     ; CT-N-CT-HC # tert. amide
+  10    5    6    9      3     ; CT-N-CT-HC # tert. amide
+   1    5    6    7      3     ; SY-N-CT-HC # (HC-CT-N-SY)  sulfonamide
+   1    5    6    8      3     ; SY-N-CT-HC # (HC-CT-N-SY)  sulfonamide
+   1    5    6    9      3     ; SY-N-CT-HC # (HC-CT-N-SY)  sulfonamide
+  10    5    1    2      3     ; CT-N-SY-OY # (OY-SY-N-X generic proper dihedral)  sulfonamide
+  10    5    1    3      3     ; CT-N-SY-OY # (OY-SY-N-X generic proper dihedral)  sulfonamide
+  10    5    1    4      3     -2.89742 11.18174 12.40975 -20.69406 0.00000 0.00000 ; CT-N-SY-N #  adapted from CT-N-SY-CT : sulfonamide
+   6    5    1    2      3     ; CT-N-SY-OY # (OY-SY-N-X generic proper dihedral)  sulfonamide
+   6    5    1    3      3     ; CT-N-SY-OY # (OY-SY-N-X generic proper dihedral)  sulfonamide
+   6    5    1    4      3     -2.89742 11.18174 12.40975 -20.69406 0.00000 0.00000 ; CT-N-SY-N #  adapted from CT-N-SY-CT : sulfonamide
+   5    1    4   14      3     -2.897  11.182  12.410  -20.694  -0.000   0.000 ; N-SY-N-C # LigParGen
+   5    1    4   33      3     -15.611   0.703  20.506  -5.598  -0.000   0.000 ; N-SY-N-H # LigParGen
+   2    1    4   14      3     ; OY-SY-N-C # (OY-SY-N-X generic proper dihedral)  sulfonamide
+   2    1    4   33      3     ; OY-SY-N-H # (OY-SY-N-X generic proper dihedral)  sulfonamide
+   3    1    4   14      3     ; OY-SY-N-C # (OY-SY-N-X generic proper dihedral)  sulfonamide
+   3    1    4   33      3     ; OY-SY-N-H # (OY-SY-N-X generic proper dihedral)  sulfonamide
+   1    4   14   15      3     25.476   0.000  -25.476  -0.000  -0.000   0.000 ; SY-N-C-O # LigParGen
+   1    4   14   20      3     -3.431  -3.008  10.598  -4.159  -0.000   0.000 ; SY-N-C-CT # LigParGen
+  33    4   14   15      3     ; H-N-C-O # amides wlj 6/20/97
+  33    4   14   20      3     ; H-N-C-CT # (CT-C-N-H)  amides C-C(O)-N-H
+   4   14   20   16      3     ; N-C-CT-CT # (CT-CT-C-N)  propanamide
+   4   14   20   21      3     ; N-C-CT-HC # (HC-CT-C-N)  acetamide
+   4   14   20   22      3     ; N-C-CT-HC # (HC-CT-C-N)  acetamide
+  15   14   20   16      3     ; O-C-CT-CT # (CT-CT-C-O)  propanamide
+  15   14   20   21      3     ; O-C-CT-HC # (HC-CT-C-O)  all carbonyls
+  15   14   20   22      3     ; O-C-CT-HC # (HC-CT-C-O)  all carbonyls
+  14   20   16   17      3     ; C-CT-CT-CA # aldehyde & ketone & acyl halide
+  14   20   16   18      3     ; C-CT-CT-HC # 
+  14   20   16   19      3     ; C-CT-CT-HC # 
+  21   20   16   17      3     ; HC-CT-CT-CA # (CA-CT-CT-HC)  ethyl benzene
+  21   20   16   18      3     ; HC-CT-CT-HC # hydrocarbon *new* 11/99
+  21   20   16   19      3     ; HC-CT-CT-HC # hydrocarbon *new* 11/99
+  22   20   16   17      3     ; HC-CT-CT-CA # (CA-CT-CT-HC)  ethyl benzene
+  22   20   16   18      3     ; HC-CT-CT-HC # hydrocarbon *new* 11/99
+  22   20   16   19      3     ; HC-CT-CT-HC # hydrocarbon *new* 11/99
+  20   16   17   31      3     ; CT-CT-CA-CA # (CA-CA-CT-CT)  ethyl benzene
+  20   16   17   23      3     ; CT-CT-CA-CA # (CA-CA-CT-CT)  ethyl benzene
+  18   16   17   31      3     ; HC-CT-CA-CA # (CA-CA-CT-HC)  ethyl benzene
+  18   16   17   23      3     ; HC-CT-CA-CA # (CA-CA-CT-HC)  ethyl benzene
+  19   16   17   31      3     ; HC-CT-CA-CA # (CA-CA-CT-HC)  ethyl benzene
+  19   16   17   23      3     ; HC-CT-CA-CA # (CA-CA-CT-HC)  ethyl benzene
+  16   17   31   29      3     ; CT-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  16   17   31   32      3     ; CT-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  23   17   31   29      3     ; CA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  23   17   31   32      3     ; CA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  16   17   23   25      3     ; CT-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  16   17   23   24      3     ; CT-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  31   17   23   25      3     ; CA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  31   17   23   24      3     ; CA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  17   23   25   27      3     ; CA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  17   23   25   26      3     ; CA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  24   23   25   27      3     ; HA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  24   23   25   26      3     ; HA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  23   25   27   29      3     ; CA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  23   25   27   28      3     ; CA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  26   25   27   29      3     ; HA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  26   25   27   28      3     ; HA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  25   27   29   31      3     ; CA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  25   27   29   30      3     ; CA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  28   27   29   31      3     ; HA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  28   27   29   30      3     ; HA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  27   29   31   17      3     ; CA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  27   29   31   32      3     ; CA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  30   29   31   17      3     ; HA-CA-CA-CA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+  30   29   31   32      3     ; HA-CA-CA-HA # (X-CA-CA-X generic proper dihedral)  aromatic ring
+
+[ dihedrals ]
+; impropers
+; ai   aj   ak   al  funct  improper
+   1    6    5   10      1  improper_Z_N_X_Y       ; SY-CT-N-CT
+  14   33    4    1      1  improper_Z_N_X_Y       ; C-H-N-SY
+   4   20   14   15      1  improper_O_C_X_Y       ; N-CT-C-O
+  31   23   17   16      1  improper_Z_CA_X_Y      ; CA-CA-CA-CT
+  25   24   23   17      1  improper_Z_CA_X_Y      ; CA-HA-CA-CA
+  27   26   25   23      1  improper_Z_CA_X_Y      ; CA-HA-CA-CA
+  29   28   27   25      1  improper_Z_CA_X_Y      ; CA-HA-CA-CA
+  31   30   29   27      1  improper_Z_CA_X_Y      ; CA-HA-CA-CA
+  29   32   31   17      1  improper_Z_CA_X_Y      ; CA-HA-CA-CA
+
+[ pairs ]
+; ai   aj  funct
+  10    7      1
+  10    8      1
+  10    9      1
+  10    2      1
+  10    3      1
+  10    4      1
+   5   14      1
+   5   33      1
+   6   11      1
+   6   12      1
+   6   13      1
+   6    2      1
+   6    3      1
+   6    4      1
+   1   11      1
+   1   12      1
+   1   13      1
+   1    7      1
+   1    8      1
+   1    9      1
+   1   15      1
+   1   20      1
+   2   14      1
+   2   33      1
+   3   14      1
+   3   33      1
+   4   16      1
+   4   21      1
+   4   22      1
+  14   17      1
+  14   18      1
+  14   19      1
+  15   33      1
+  15   16      1
+  15   21      1
+  15   22      1
+  20   33      1
+  20   31      1
+  20   23      1
+  16   29      1
+  16   32      1
+  16   25      1
+  16   24      1
+  17   21      1
+  17   22      1
+  17   27      1
+  17   30      1
+  17   26      1
+  23   18      1
+  23   19      1
+  23   29      1
+  23   32      1
+  23   28      1
+  25   31      1
+  25   30      1
+  27   24      1
+  27   32      1
+  29   26      1
+  31   18      1
+  31   19      1
+  31   24      1
+  31   28      1
+  21   18      1
+  21   19      1
+  22   18      1
+  22   19      1
+  24   26      1
+  26   28      1
+  28   30      1
+  30   32      1
+
+#ifdef POSRES
+[ position_restraints ]
+; atom  type      fx      fy      fz
+    10     1    1000    1000    1000
+     5     1    1000    1000    1000
+     6     1    1000    1000    1000
+     1     1    1000    1000    1000
+     2     1    1000    1000    1000
+     3     1    1000    1000    1000
+     4     1    1000    1000    1000
+    14     1    1000    1000    1000
+    15     1    1000    1000    1000
+    20     1    1000    1000    1000
+    16     1    1000    1000    1000
+    17     1    1000    1000    1000
+    23     1    1000    1000    1000
+    25     1    1000    1000    1000
+    27     1    1000    1000    1000
+    29     1    1000    1000    1000
+    31     1    1000    1000    1000
+#endif
+
